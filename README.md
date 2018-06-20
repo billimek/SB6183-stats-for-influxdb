@@ -1,6 +1,6 @@
 # SB6183 Modem Stats emitted to Influxdb running as a Docker container
 
-![Screenshot]()
+![Screenshot](https://i.imgur.com/ppZjnkP.png)
 
 This tool is a parser of the Arris SB6183 cable modem to emit signal & power metrics to InfluxDB
 
