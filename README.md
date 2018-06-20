@@ -4,6 +4,9 @@
 
 This tool is a parser of the Arris SB6183 cable modem to emit signal & power metrics to InfluxDB
 
+## Grafana dashboard example
+See this [example json](sb6183-modem-stats.json) for a grafana dashboard as shown in the screenshot above
+
 ## Configuration within config.ini
 
 #### GENERAL
@@ -24,7 +27,7 @@ This tool is a parser of the Arris SB6183 cable modem to emit signal & power met
 |:--------------|:-------------------------------------------------------------------------------------------------------------------|
 |URL         |URL of the cable modem info page.  Leave blank for http://192.168.100.1/RgConnect.asp                                                            |
 
-**Usage**
+## Usage
 
 Before the first use run pip3 install -r requirements.txt
 
@@ -42,7 +45,7 @@ You will need the influxdb library installed to use this - [Found Here](https://
 
 1. Install [Docker](https://www.docker.com/)
 
-1. Make a directory to hold the config.ini file. Navigate to that directory and download the sample config.ini in this repo.
+2. Make a directory to hold the config.ini file. Navigate to that directory and download the sample config.ini in this repo.
 
 ```bash
 mkdir SB6183-stats-for-influxdb
@@ -50,7 +53,7 @@ curl -O https://raw.githubusercontent.com/billimek/SB6183-stats-for-influxdb/blo
 cd SB6183-stats-for-influxdb
 ```
 
-1. Modify the config file with your influxdb settings.
+3. Modify the config file with your influxdb settings.
 
 ```bash
 vim config.ini
@@ -63,7 +66,7 @@ Example:
 Address = 10.13.14.200
 ```
 
-1. Run the container, pointing to the directory with the config file. This should now pull the image from Docker hub. You can do this by either running docker run or by using docker-compose.
+. Run the container, pointing to the directory with the config file. This should now pull the image from Docker hub. You can do this by either running docker run or by using docker-compose.
 
 ```bash
 docker run -d \
